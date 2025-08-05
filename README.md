@@ -31,5 +31,10 @@ Python analysis codes
 1. python_analysis/network_circular.py: this is the first code that should be run to start the analysis process. Edit the directory and folder names to suit your own system. Set different flags to 0 or 1 depending on whether you want plotting or not. This code reads in the simulation results of each time step and plots the network strain plot. It also calculates radial displacements of each node and outputs them.
 2. python_analysis/network_circular_caller.py: this code automates the running of network_circular.py. Most of this code is commented out now and only the top few lines that are un-commented are good to use. The bottom commented part is left as a learning tool for the reader.
 3. python_analysis/network_circular_caller_caller.py: this code automates the analysis in network_circular_caller.py which has been commented out and is not used. Left for educational purposes.
-4. python_analysis/bndry_forces_circular.py: this code is as important as the first code above. It calculates the local and far field dipole moments and stores the results in output files.
+4. python_analysis/bndry_forces_circular.py: this code is as important as the first code above. It calculates the local and far field dipole moments and stores the results in output files. It also calculates stress according to LAMMPS documentation.
+5. python_analysis/bndry_forces_circular_caller.py: it automates the calling and running of bndry_forces_circular.py.
+6. python_analysis/dipole_moment_plots.py: it writes a file with mean dfar, dloc with their stds (for a given srand, which decides a random dipole placement). that file is read by dipole_moment_means.py.
+7. python_analysis/dipole_moment_plots_caller.py: automates the running of dipole_moment_plots.py
+8. python_analysis/dipole_moment_means.py: it reads the mean values (that have been written to file using dipole_moment_plots.py) for each kappa and N value and produces master plots for a given srand.
+9. 
 
