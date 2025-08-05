@@ -31,5 +31,5 @@ Python analysis codes
 1. python_analysis/network_circular.py: this is the first code that should be run to start the analysis process. Edit the directory and folder names to suit your own system. Set different flags to 0 or 1 depending on whether you want plotting or not. This code reads in the simulation results of each time step and plots the network strain plot. It also calculates radial displacements of each node and outputs them.
 2. python_analysis/network_circular_caller.py: this code automates the running of network_circular.py. Most of this code is commented out now and only the top few lines that are un-commented are good to use. The bottom commented part is left as a learning tool for the reader.
 3. python_analysis/network_circular_caller_caller.py: this code automates the analysis in network_circular_caller.py which has been commented out and is not used. Left for educational purposes.
-4. 
+4. python_analysis/bndry_forces_circular.py: this code is as important as the first code above. It calculates the local and far field dipole moments and stores the results in output files.
 
