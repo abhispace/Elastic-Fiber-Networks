@@ -22,6 +22,7 @@ gcc c_codename.c -Ofast -o lamel -m64 nrutil_jen.c -lm -std=c99
 Bash script
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Example file: arp_radial_dip_cluster_dip_rand1.sub
+
 Modify this file to suit your system settings and directory structure. It was originally written to run on a cluster. Therefore, the line numbers 3 through 8 may need to be commented out.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
