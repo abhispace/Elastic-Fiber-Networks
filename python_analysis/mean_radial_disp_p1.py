@@ -9,8 +9,6 @@ Created on Sat May  3 03:42:02 2025
 # -*- coding: utf-8 -*-
 """
 Created on Wed Apr 30 22:49:54 2025
-this code reads in all the simulation data for srand 113....122.
-does not work for srand = 112 yet
 
 it reads all the num_center, srand and diff_network values of dfar and energies in this order.
 Then it finds the mean, median and, std and sem and writes them to a file.
