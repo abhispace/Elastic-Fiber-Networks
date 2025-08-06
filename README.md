@@ -36,5 +36,7 @@ Python analysis codes
 6. python_analysis/dipole_moment_plots.py: it writes a file with mean dfar, dloc with their stds (for a given srand, which decides a random dipole placement). that file is read by dipole_moment_means.py.
 7. python_analysis/dipole_moment_plots_caller.py: automates the running of dipole_moment_plots.py
 8. python_analysis/dipole_moment_means.py: it reads the mean values (that have been written to file using dipole_moment_plots.py) for each kappa and N value and produces master plots for a given srand.
+9. python_analysis/dipole_moment_means_srand.py: same as dipole_moment_means.py. It was created as a test code to test the results corresponding to different random dipole placements. For each specific dipole placement, it writes the mean far field dipole moment over all possible Nd values.
+10. python_analysis/dipole_moment_means_srand_all_srand.py: finds the mean far field dipole moments for larger system size (L=128 or R2 = 50) and compares the results to that of the original system size. Also creates effective p plots.
 9. 
 
