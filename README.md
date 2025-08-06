@@ -42,4 +42,5 @@ Python analysis codes
 12. python_analysis/all_srand_all_nd_diff_network.py: it reads in each simulation data and calculates mean dfar and radial displacements for all networks which are bending dominated. the results are written to file which is in turn used by all_srand..._plotter.py to create plots.
 13. python_analysis/all_srand_all_nd_diff_network_plotter.py: This code reads the values of dfar and energies written out by all_srand_all_nd_diff_network.py code and reads them to make plots. this is where the plot for the paper is created for dfar vs Nd and en ratio vs Nd!! it also calculates the p_eff of all three models.
 14. python_analysis/mean_radial_disp_p1.py: only for p=1 cases, for each Nd value, it reads all srand cases and finds the average radial displacements.
+15. python_analysis/emt_func.py: it can be imported by other files to pass the values of mu_m (also called alpha_m) and returns p_eff values.
 
