@@ -28,6 +28,14 @@ Modify this file to suit your system settings and directory structure. It was or
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Python analysis codes
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Keywords:
+1. srand: random number that decides where dipoles are placed. we have a total of 10 different srand values. for each srand, the network in outer annular region is varied 10 times giveing us a total of 100 simulaitons for each dipole number.
+2. dfar: far field dipole moment
+3. Nd: number of isotropic dipoles
+
+
+List of codes:
+
 1. python_analysis/network_circular.py: this is the first code that should be run to start the analysis process. Edit the directory and folder names to suit your own system. Set different flags to 0 or 1 depending on whether you want plotting or not. This code reads in the simulation results of each time step and plots the network strain plot. It also calculates radial displacements of each node and outputs them.
 2. python_analysis/network_circular_caller.py: this code automates the running of network_circular.py. Most of this code is commented out now and only the top few lines that are un-commented are good to use. The bottom commented part is left as a learning tool for the reader.
 3. python_analysis/network_circular_caller_caller.py: this code automates the analysis in network_circular_caller.py which has been commented out and is not used. Left for educational purposes.
@@ -43,4 +51,11 @@ Python analysis codes
 13. python_analysis/all_srand_all_nd_diff_network_plotter.py: This code reads the values of dfar and energies written out by all_srand_all_nd_diff_network.py code and reads them to make plots. this is where the plot for the paper is created for dfar vs Nd and en ratio vs Nd!! it also calculates the p_eff of all three models.
 14. python_analysis/mean_radial_disp_p1.py: only for p=1 cases, for each Nd value, it reads all srand cases and finds the average radial displacements.
 15. python_analysis/emt_func.py: it can be imported by other files to pass the values of mu_m (also called alpha_m) and returns p_eff values.
+16. python_analysis/radial_disp_stress.py: reads the mean radial displacement, fits them and extracts sigma1/mu_m the mean radial displacement is written by all_srand_all_nd_diff_network.py
+17. python_analysis/dip_distances_quantify.py: it calculates various geometrical metrics such as mean pairwise distances between dipoles, convex hull area, radius of gyration for a gien set of dipoles, etc. to relate the increase in dfar or bend-stretch energy ratios to these quantities.
+18. python_analysis/dfar_all_kappa_all_srand.py: this code reads all the simulations results one by one for all kappa values and then takes a mean and std and writes them to file. the result is figure 2 in the contraction paper (scatter plot of dfar vs nd and dfar vs bending energy).
+19. python_analysis/dfar_all_kappa_all_srand_plotter.py: it reads the output from dfar_all_kappa_srand.py for all kappa and then makes a plot of dfar vs N and packing fraction for the paper the result is figure 2 in the contraction paper.
+20. python_analysis/stress_rings.py: for a given srand, it reads all the simulations and it reads stress on each concentric ring in each of them. finds the mean and std over all data and plots it vs radius for different N.
+21. python_analysis/sigma1_calc_and_measured_means.py: the code reads in the mean values of fitted sigma1/mu_m  (from the radial displacement plots). it also reads in the mean values of measured sigma1 (from the stress in rings calculations). 
+
 
