@@ -14,6 +14,8 @@ C Codes
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Compilation and execution
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Important: make sure that RAN.c and nrutil_jen.c and nrutil_jen.h are in the same folder where the main .c codes are. Then run the following commands to compile and execute the code
+
 gcc c_codename.c -Ofast -o lamel -m64 nrutil_jen.c -lm -std=c99
 
 ./lamel > output_log.txt &
